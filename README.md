@@ -5,3 +5,5 @@ Interests:
 - Odoo Development
 - ERP
 - BI
+
+LinkedIn: https://www.linkedin.com/in/bensonkwek/
