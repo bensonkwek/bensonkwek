@@ -1,4 +1,4 @@
-name: 'PR Tasks Completed Check'
+name: 'Task Completed Checker Action'
 on: 
   pull_request:
     types: [opened, edited]
