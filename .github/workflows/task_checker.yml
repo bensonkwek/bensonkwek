@@ -11,15 +11,11 @@ jobs:
       - uses: kentaro-m/task-completed-checker-action@v0.1.1
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-
-# We must set the commit status manually
-      # Reference: https://github.com/bahmutov/eleventy-example/blob/main/.github/workflows/ci.yml#L27
-      - name: Test ✅
-        if: ${{ success() }}
+    if: ${{ success() }}
         # set the merge commit status check
         # using GitHub REST API
         # see https://docs.github.com/en/rest/reference/repos#create-a-commit-status
-        run: |
+    run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
@@ -30,12 +26,11 @@ jobs:
             "description": "task-check passed",
             "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
-      - name: Test 🚨
-        if: ${{ failure() }}
+    elif: ${{ failure() }}
         # set the merge commit status check
         # using GitHub REST API
         # see https://docs.github.com/en/rest/reference/repos#create-a-commit-status
-        run: |
+    run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
