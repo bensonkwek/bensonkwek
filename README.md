@@ -8,4 +8,3 @@ Interests:
 
 LinkedIn: https://www.linkedin.com/in/bensonkwek/
 
-i am funny
