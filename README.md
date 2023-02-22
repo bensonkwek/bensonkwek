@@ -7,3 +7,5 @@ Interests:
 - BI
 
 LinkedIn: https://www.linkedin.com/in/bensonkwek/
+
+i am funny
