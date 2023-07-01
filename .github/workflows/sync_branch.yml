@@ -14,7 +14,7 @@
             with:
               node-version: 12
           - name: Opening pull request
-            uses: bensonkwek/sync-multi-branches@v1.0
+            uses: bensonkwek/sync-multi-branches@v1.0.2
             id: pull
             with:
               # User token to be associated with this pull request.
