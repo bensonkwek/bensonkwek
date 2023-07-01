@@ -14,7 +14,7 @@
             with:
               node-version: 12
           - name: Opening pull request
-            uses: sudoStatus200/create-sync-pr@0.3.1
+            uses: bensonkwek/sync-multi-branches@1.0
             id: pull
             with:
               # User token to be associated with this pull request.
