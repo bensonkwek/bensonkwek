@@ -20,6 +20,6 @@
               # User token to be associated with this pull request.
               GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
               # Branch from make pull-request from
-              SOURCE_BRANCH: "main"
+              FROM_BRANCH: "main"
               # Branch to make the pull-request against
-              TARGET_BRANCH: "devel,production"
+              TO_BRANCH: "devel,production"
