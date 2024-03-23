@@ -1,0 +1,25 @@
+  name: Sync branches
+  on:
+    push:
+      branches:
+        - main
+  jobs:
+    sync-branches:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Checkout
+            uses: actions/checkout@v2
+          - name: Set up Node
+            uses: actions/setup-node@v1
+            with:
+              node-version: 12
+          - name: Opening pull request
+            uses: bensonkwek/sync-multi-branches@1.0.0
+            id: pull
+            with:
+              # User token to be associated with this pull request.
+              GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+              # Branch from make pull-request from
+              FROM_BRANCH: "main"
+              # Branch to make the pull-request against
+              TO_BRANCH: "devel,production"
