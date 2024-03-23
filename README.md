@@ -23,3 +23,4 @@ System experience includes end-to-end implementation, testing, deployment, hyper
 - Odoo Development
 - ERP
 - BI
+- Running, swimming
